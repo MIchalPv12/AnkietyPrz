@@ -1,0 +1,106 @@
+       <form action="administracja.php" method='post' enctype="multipart/form-data">
+           
+          <!--<p><textarea name="wynik" rows="10" cols="20">:wynik:</textarea></p>-->
+         
+              
+          
+              
+              <div id="polee">
+                  <ul>      
+                       <li>
+                          <p><label for="uzy">Dane Użytkowników:</label></p>
+                          
+                      </li>
+                      <div id="polee">
+                          <p>Województwo:</p>
+                      
+           <select  id="woj" name="woj">
+            <option value="">Wszystkie</option>
+            <option value="podkarpackie">podkarpackie</option>
+             <option value="mazowieckie">mazowieckie</option>
+                <option value="dolnośląskie">dolnośląskie</option>
+             <option value="lubelskie">lubelskie</option>
+             <option value="lubuskie">lubuskie</option>
+             <option value="łódzkie">łódzkie</option>
+             <option value="małopolskie">małopolskie</option>
+             <option value="opolskie">opolskie</option>
+             <option value="podlaskie">podlaskie</option>
+             <option value="pomorskie">pomorskie</option>
+             <option value="śląskie">śląskie</option>
+             <option value="świętokrzyskie">świętokrzyskie</option>
+             <option value="warmińsko-mazurskie">warmińsko-mazurskie</option>
+             <option value="wielkopolskie">wielkopolskie</option>
+             <option value="zachodniopomorskie">zachodniopomorskie</option>
+             <option value="kujawsko-pomorskie">kujawsko-pomorskie</option>
+            </select>
+                          </div>
+                      <div id="polee">
+                          <p>Płeć:</p>
+           <select name="plec">
+            <option value="">wszystkie</option>
+             <option value="1">Mężczyzna</option>
+            <option value="0">Kobieta</option>
+            </select>
+                      </div>
+          
+             
+             
+          <div id="a">
+              <div id="polee"><p><input type="checkbox" name="Data_od" />Data od:</p> <script>DateInput('Data', true, 'YYYY-MM-DD')</script></div>
+      <div id="polee"><p> <input type="checkbox" name="Data_do" />Data do:</p> <script>DateInput('Data2', true, 'YYYY-MM-DD')</script></div>
+    </div>
+          <div style="clear:both;">
+          
+           <p><input type="submit" value="Wyswietl" name="Wyswietl" /></p>
+          </div>
+                  </ul>
+              </div>
+              
+              <div id="polee" >
+                  <ul>
+                      <li>
+                          <p><label for="Tem">Zarządanie użytkownikami:</label></p>
+                          Podaj ID:<input size="2" type="text" name="id" />
+                          <input type="submit" value="Wybierz" name="Wybierz"/>
+                      </li>
+                      
+                  </ul>
+                  
+                  <div id="edit" style="visibility:hidden">
+                      <ul>
+                          <li>
+                              <p><label for="Tem">Login:</label></p>
+                               <input size="30" type="text" name="login" value=":Login:"/>
+                          </li>
+                          <li>
+                              <p><label for="Tem">Hasło:</label></p>
+                               <input size="30" type="text" name="haslo" value=":Haslo:"/>
+                          </li>
+                          <li>
+                              <input type="submit" value="Edytuj" name="Edytuj"/>
+                              <input type="submit" value="Usuń" name="Usun"/>
+							  <input type="submit" value="Blokuj/Odblokuj" name="Blokuj"/>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div id="tabela"></div>
+              <div id="polee">
+			   <p> -------------------------------------------------------------------------------------------------------------------------</p>
+				<ul>
+                      <li>
+                          <p><label for="Tem">Temat:</label></p>
+                          <input size="40" type="text" name="Temat"/>
+                      </li>
+                      <li>
+                          <p><label for="Wiadom">Wiadomość:</label></p>
+                          <textarea name="wiad" cols="42" rows="12"></textarea>
+                      </li>
+                      <li>
+                          <p><input type="submit" value="Wyślij" name="Wyslij" /></p>
+                      </li>
+                  </ul>
+				  
+              </div>
+			  </form>
+			

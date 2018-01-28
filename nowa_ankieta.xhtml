@@ -1,0 +1,130 @@
+<html lang="pl">
+      <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+		 <meta name="viewport" content="width=device-width, initial-scale=1">
+		 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	</head>
+		<style type="text/css">
+			#fixme { 
+			margin-left: 40%;
+			display:inline-block;
+			vertical-align:top;
+			position: absolute; 
+			left: 0px; 
+			top: 0px; 
+		}
+		#fixmetoo { 
+			position: absolute; 
+			right: 0px; 
+			bottom: 0px; 
+		}
+		div > div#fixme { position: fixed; }
+		div > div#fixmetoo { position: fixed; }
+		
+		pre.fixit { 
+			overflow:auto;
+			border-left:1px dashed #000;
+			border-right:1px dashed #000;
+			padding-left:2px; }
+		
+		#rodzic {
+        background-color:black;
+        border:3px dashed red;
+        font-size:1.4em;
+      }
+
+      #dziecko1 {
+        float:left;
+        width:70%;
+        background-color:lightblue;
+      }
+
+      #dziecko2 {
+        float:left;
+        width:30%;
+        background-color:lightgreen;
+      }
+
+      .floatfix {
+        zoom:1; 
+      }
+
+      .floatfix:after {
+        content:'';
+        display:block;
+        clear:both;
+      }
+		</style>
+		
+		
+        <title>Tworzenie ankiety</title>
+
+        
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+        
+        <!-- Main Style -->
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+        <!-- Responsive Style -->
+        <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+        <!--Icon Fonts-->
+        <link rel="stylesheet" media="screen" href="assets/fonts/font-awesome/font-awesome.min.css" />
+
+
+        <!-- Extras -->
+        <link rel="stylesheet" type="text/css" href="assets/extras/animate.css">
+        <link rel="stylesheet" type="text/css" href="assets/extras/lightbox.css">
+
+
+        <!-- jQuery Load -->
+        <script src="assets/js/jquery-min.js"></script>
+		<script src="bootstrap-maxlength.js"></script>
+
+
+	
+
+	<form method="POST" action="ankieta_action.php" >
+		<div class="input_fields_wrap form-group" id="content">
+			<div class="guziki"	id="fixme">
+				<input name="submit" type="submit" class="btn btn-primary " value="Akceptuj">  <!--przycisk do wyslania zapytania -->
+			</div>
+			<br></br>
+			<p>Tytuł ankiety</p> <input type="text"  maxlength="45" required class="form-control" placeholder="Tytuł" name="tytulAnkiety"/></p>
+			<p>Opis ankiety</p> <input type="text"  maxlength="45" required class="form-control" placeholder="Opis" name="opisAnkiety"/></p>
+			
+			
+			
+			
+			<div class="form-inline" role="form">
+				
+				 <div class="form-group">
+				<label class="sr-only" for="Anonimowosc">Anonimowosc</label>
+				<p>Anonimowość</p>
+				<input type="radio" name="Anonimowosc" value="1" >Tak
+				<input type="radio" name="Anonimowosc"  value="0"checked>Nie
+			  </div>
+			</div>
+				
+
+			</form>
+			
+<script>$('input.form-control').maxlength({
+    alwaysShow: true,
+    threshold: 10,
+    warningClass: "label label-info",
+    limitReachedClass: "label label-danger",
+    placement: 'top',
+    preText: ' Wykorzystano ',
+    separator: ' z ',
+    postText: ' znaków.'
+});</script>
+				
+
+
+	
+</html>
