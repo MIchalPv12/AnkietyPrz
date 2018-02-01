@@ -19,9 +19,9 @@
 	
 		$sql = "select Tytul from ankiety where idAnkiety = '{$idAnkiety}' limit 1";
 		$tytul = odczytaj($sql, "Tytul");
-		echo '<a href="#" class="tool" tresc="Do ankiety o tytule ',$tytul,'"><input name="submit" type="submit" class="btn btn-primary bt" value="Prześlij pytania"> </a>';
+		return '<a href="#" class="tool" tresc="Do ankiety o tytule '.$tytul.'"><input name="submit" type="submit" class="btn btn-primary bt" value="Prześlij pytania"> </a>';
 		}
-		else echo  '<input name="submit" type="submit" class="btn btn-primary bt" value="Prześlij pytania"> ';
+		else return  '<input name="submit" type="submit" class="btn btn-primary bt" value="Prześlij pytania"> ';
 	}
 	
     //zapobiega pokazywanie bledow

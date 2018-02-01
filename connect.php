@@ -1,6 +1,6 @@
 ﻿<?php
-$host = "localhost";
-$db_user = "root";
-$db_password = "";
-$db_name = "mydb";
+$host = "mysql.cba.pl";
+$db_user = "michalp";
+$db_password = "Michalp13";
+$db_name = "michalp13";
 ?>

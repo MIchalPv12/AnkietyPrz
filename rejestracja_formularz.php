@@ -14,11 +14,11 @@ $replace='';
 
 
                     if (isset($_SESSION['blad'])) {
-                        echo $_SESSION['blad'];
+                        $replace= $_SESSION['blad'];
                         unset($_SESSION['blad']);
                     }
                     if (isset($_SESSION['zablokowany'])) {
-                        echo $_SESSION['zablokowany'];
+                        $replace= $_SESSION['zablokowany'];
                         unset($_SESSION['zablokowany']);
                     }
 $search='<!--001-->';

@@ -1,7 +1,11 @@
 ﻿<?php
 include "connect.php";
 include "ankietyLista.php";
+include "zapiszOdpowiedzi.php";
+include "ankietyEdycja.php";
+include "ankietyWyniki.php";
 session_start();
+include "ankietyOdpowiedz.php";
 if (!isset($_SESSION['zalogowany'])) {
     header('Location: index.php');
     exit();
@@ -42,11 +46,10 @@ $replace='';
 
         switch ($subPage) {
             case 'ankietyEdycja':
-                $replace= include "ankietyEdycja.php";
+                $replace= Edycja();
                 break;
             case 'PytaniaOtwarteDodaj':
-                header("Location:PytaniaOtwarteDodaj.php");
-                exit();
+                $replace= include "PytaniaOtwarteDodaj.php";
                 break;
             case 'PytaniaZamknieteDodaj':
                 $replace= include "PytaniaZamknieteDodaj.php";
@@ -55,16 +58,16 @@ $replace='';
                 $replace= include "ankietyUsun.php";
                 break;
             case 'ankietyOdpowiedz':
-                $replace= include "ankietyOdpowiedz.php";
+                $replace= AnkietyOdp();
                 break;
             case 'ankietyWypelnij':
                 $replace= include "ankietyWypelnij.php";
                 break;
             case 'zapiszOdpowiedzi':
-                $replace= include "zapiszOdpowiedzi.php";
+                $replace= zapisz();
                 break;
             case 'ankietyWyniki':
-                $replace= include "ankietyWyniki.php";
+                $replace= Wyniki();
                 break;
             case 'ankietyLista':
                 $replace= ListaAnkiet();

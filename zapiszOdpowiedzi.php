@@ -1,7 +1,8 @@
 <?php
-
+function zapisz(){
 $id = $_GET['id'];
-
+include "connect.php";
+$mysqli = new mysqli($host, $db_user, $db_password, $db_name);
 // Sprawdzanie czy id jest napewno liczbą.
 if (!is_numeric($id)) {
     header('Location: index.php');
@@ -35,4 +36,5 @@ for ($i = 0; $i < $_POST['iloscPytan']; $i++) {
     $mysqli->query($q);
 }
 
-echo 'Dziękujemy za wypełnienie ankiety!';
+return 'Dziękujemy za wypełnienie ankiety!';
+}

@@ -1,10 +1,4 @@
-<html lang="pl">
-<head>
 
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	</head>
 
 <?php 
 	include('funkcje.php');

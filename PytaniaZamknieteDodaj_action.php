@@ -1,11 +1,3 @@
-<html lang="pl">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
-	<!-- Bootstrap -->
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-</head>
-
 <?php 
 	include('funkcje.php');
 	
@@ -21,12 +13,9 @@
 		$idAnkiety = $_SESSION['idAnkiety'];
 		$post = $_POST["trescZamkniete"];
 		
-		$sql = "INSERT INTO `pytania` (`Tresc`, `Ankiety_idAnkiety`) 
-						VALUES ('{$post}', '{$idAnkiety}')";   
+		$sql = "INSERT INTO `pytania` (`Tresc`, `Ankiety_idAnkiety`) VALUES ('{$post}', '{$idAnkiety}')";   
 		if(wstawDoBazy($sql, $post)){
-			$query = "SELECT idPytania from pytania 
-								where Tresc = '{$post}' 
-								AND Ankiety_idAnkiety = '{$idAnkiety}' Limit 1";
+			$query = "SELECT idPytania from pytania where Tresc = '{$post}' AND Ankiety_idAnkiety = '{$idAnkiety}' Limit 1";
 			$RowName = "idPytania";
 			$Pytania_idPytania = odczytaj($query, $RowName);
 			

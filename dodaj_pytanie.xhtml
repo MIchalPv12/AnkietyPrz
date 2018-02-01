@@ -104,7 +104,6 @@ a.tool:hover::before {
     var wrapper         = $(".input_fields_wrap"); //Fields wrapper
 	 var wrapper2         = $(".input_fields_wrap2"); //Fields wrapper
     var add_button      = $(".add_open"); //Add button ID
-	// var add_button2      = $(".add_closed"); //Add button ID
 	var guziki = $(".guziki");
 	
 	
@@ -120,16 +119,7 @@ a.tool:hover::before {
 		$(wrapper).append('<p><div>Pytanie nr '+ x +'&nbsp<span class="glyphicon glyphicon-question-sign"></span><input type="text" maxlength="45" required class="form-control" placeholder="Treść pytania"name="mytext[]" /><a href="#" class="remove_field">Usun</a></div></p>' ); //add input box
 		window.scrollTo(0,document.body.scrollHeight);
 		
-		$('input.form-control').maxlength({
-    alwaysShow: true,
-    threshold: 10,
-    warningClass: "label label-info",
-    limitReachedClass: "label label-danger",
-    placement: 'top',
-    preText: ' Wykorzystano ',
-    separator: ' z ',
-    postText: ' znaków.'
-});
+		
         }
 		
 		else {
